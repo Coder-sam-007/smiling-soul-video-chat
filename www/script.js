@@ -20,6 +20,9 @@ const APP_URL = (() => {
     (location.hostname == "localhost" ? ":5500" : "")
   );
 })();
+// const APP_URL = (() => {
+//   return "http://127.0.0.1/:5500/";
+// })();
 
 const ROOM_ID = (() => {
   let roomName = location.pathname.substring(1);
