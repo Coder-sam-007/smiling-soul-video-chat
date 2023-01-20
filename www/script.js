@@ -12,10 +12,14 @@ const ICE_SERVERS = [
 ];
 
 const APP_URL = (() => {
-  return "https://smiling-soul-video-chat.netlify.app";
+  const protocol =
+    "http" + (location.hostname == "localhost" ? "" : "s") + "://";
+  return (
+    protocol +
+    location.hostname +
+    (location.hostname == "localhost" ? ":5500" : "")
+  );
 })();
-
-console.log("APP_URL is: ", APP_URL);
 
 const ROOM_ID = (() => {
   let roomName = location.pathname.substring(1);

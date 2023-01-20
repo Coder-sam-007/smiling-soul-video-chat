@@ -34,29 +34,10 @@
 	<section id="videos"></section>
 	<main id="app">
 		<div id="appWrap" v-bind:style="'display:block;'">
-			<div id="intro" v-if="showIntro && !showChat && !showSettings">
-				<p>
-					<strong>Tlk</strong> is a free, peer-to-peer, disposable group video calling app for the web. Works in all
-					major browsers. No signups. No downloads. 100% peer-to-peer.
-				</p>
-				<p>
-					<small>
-						<i>Share this link to start talking. </i><br />
-						<span class="roomLink">{{roomLink}}</span>
-						<a class="copyURL" href="javascript:void(0)" v-on:click="copyURL">{{copyText || "Copy"}}</a>
-					</small>
-				</p>
-				<div class="footer">
-					<iframe src="https://ghbtns.com/github-btn.html?user=vasanthv&repo=tlk&type=star&count=true" frameborder="0"
-						scrolling="0" width="150" height="20" title="GitHub"></iframe>
-					<a href="/legal.html" class="terms light"><small>Terms</small></a>
-				</div>
-			</div>
 
 			<div id="callFeedbackWrap" v-if="callEnded">
 				<div id="callFeedback">
 					<div class="bold">Your call has been disconnected. You can now close this window.</div>
-					<br />
 
 				</div>
 			</div>
