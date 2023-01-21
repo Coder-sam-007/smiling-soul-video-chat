@@ -4,11 +4,10 @@ const http = require("http");
 const app = express();
 const server = http.createServer(app);
 const io = require("socket.io")(server);
-require("dotenv").config()
+require("dotenv").config();
 
 const signallingServer = require("./server/signalling-server.js");
 
-// Get PORT from env variable else assign 3000 for development
 const PORT = process.env.PORT || 5500;
 
 // Server all the static files from www folder
